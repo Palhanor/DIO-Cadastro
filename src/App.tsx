@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-
-// Adicionar os icones dos inputs
-// Finalizar a estilização do rodapé
+import { IoMdMail } from "react-icons/io";
+import { RiLinkedinFill, RiLockPasswordFill } from "react-icons/ri";
+import { FaFacebookF, FaTwitter, FaInstagram, FaUser } from "react-icons/fa";
 
 function App() {
   return (
@@ -86,6 +86,22 @@ function App() {
               className="main_input"
             />
             <input type="password" placeholder="Senha" className="main_input" />
+            <div className="icone-usuario">
+              <FaUser color="#8647ad" />
+            </div>
+            <div className="icone-email">
+              <IoMdMail color="#8647ad" />
+            </div>
+            <div className="icone-telefone">
+              <img
+                src={require("./assets/brasil.png")}
+                alt="Bandeira do Brasil"
+                className="bandeira"
+              />
+            </div>
+            <div className="icone-senha">
+              <RiLockPasswordFill color="#8647ad" />
+            </div>
             <button className="main_botao">Criar minha conta grátis</button>
           </form>
           <p className="main_contrato">
@@ -115,48 +131,70 @@ function App() {
         </div>
       </main>
       <footer className="footer">
-        <div className="footer_links">
+        <nav className="footer_navegacao">
           <div className="footer_informacoes">
-            <h3>make the change</h3>
-            <a href="https://www.dio.me/enterprise">Para Empresas</a>
-            <h3>Informações</h3>
-            <a
-              href="https://help.dio.me/pt-BR/"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              Central de Ajuda
-            </a>
-            <a href="https://www.dio.me/terms-and-policies">
-              Termos e Políticas
-            </a>
+            <div>
+              <h3>make the change</h3>
+              <a href="https://www.dio.me/enterprise">Para Empresas</a>
+            </div>
+            <div>
+              <h3>Informações</h3>
+              <a
+                href="https://help.dio.me/pt-BR/"
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                Central de Ajuda
+              </a>
+              <a href="https://www.dio.me/terms-and-policies">
+                Termos e Políticas
+              </a>
+            </div>
           </div>
           <div className="footer_apps">
             <h2>Download Grátis</h2>
             <div>
               <a href="https://play.google.com/store/apps/details?id=one.digitalinnovation.app">
-                Google Play
+                <img
+                  src={require("./assets/google_play.png")}
+                  alt="Baixar pela loga da Google"
+                />
               </a>
               <a href="https://apps.apple.com/us/app/digital-innovation-one/id1439709522">
-                Play Store
+                <img
+                  src={require("./assets/app_store.png")}
+                  alt="Baixar pela loja da Apple"
+                />
               </a>
             </div>
           </div>
-        </div>
+        </nav>
         <div className="footer_redes-sociais">
-          <img src={require("./assets/dio_make.png")} alt="Logo da DIO" />
-          <ul className="footer_links-redes">
+          <img
+            src={require("./assets/dio_make.png")}
+            alt="Logo da DIO"
+            className="footer_logo"
+          />
+          <ul>
             <li>
-              <a href="#">In</a>
+              <a href="#">
+                <RiLinkedinFill />
+              </a>
             </li>
             <li>
-              <a href="https://pt-br.facebook.com/diomakethechange/">Face</a>
+              <a href="https://pt-br.facebook.com/diomakethechange/">
+                <FaFacebookF />
+              </a>
             </li>
             <li>
-              <a href="https://twitter.com/dio_me_">Twi</a>
+              <a href="https://twitter.com/dio_me_">
+                <FaTwitter />
+              </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/dio_makethechange/">Insta</a>
+              <a href="https://www.instagram.com/dio_makethechange/">
+                <FaInstagram />
+              </a>
             </li>
           </ul>
         </div>
